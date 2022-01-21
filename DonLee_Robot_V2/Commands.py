@@ -14,10 +14,10 @@ db = Database()
 @DonLee_Robot_V2.on_message(filters.command(["start", "alive"]) & filters.private)
 async def start(bot: DonLee_Robot_V2, msg: Import.Msg):
     START_BUTTON = [[  
-          Import.Button("➕ 𝖠𝖽𝖽 𝖬𝖾 𝖳𝗈 𝖸𝗈𝗎𝗋 𝖢𝗁𝖺𝗍𝗌 ➕", url=f"http://t.me/{Config.BOT_USERNAME}?startgroup=true")
+          Import.Button("➕ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ", url=f"http://t.me/{Config.BOT_USERNAME}?startgroup=true")
           ],[
-          Import.Button("⚠️ 𝖧𝖾𝗅𝗉", callback_data="help"),
-          Import.Button("𝖠𝖻𝗈𝗎𝗍 🤠", callback_data="about")
+          Import.Button("ʜᴇʟᴘ", callback_data="help"),
+          Import.Button("ᴀʙᴏᴜᴛ", callback_data="about")
           ]]
     if not await db.is_user_exist(msg.from_user.id):
         await db.add_user(msg.from_user.id)
@@ -67,7 +67,7 @@ async def start(bot: DonLee_Robot_V2, msg: Import.Msg):
         return
 
     button = [[
-     Import.Button('➕ Add Me To Your Groups ➕', url='http://t.me/donlee_robot?startgroup=true')
+     Import.Button('➕ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ', url='http://t.me/donlee_robot?startgroup=true')
     ]]
     await msg.reply_photo(
     photo=random.choice(Config.PHOTO),
@@ -134,13 +134,7 @@ async def about(bot: DonLee_Robot_V2, msg: Import.Msg):
 
 @DonLee_Robot_V2.on_message(filters.command(["sub", "subscribe"]) & filters.private, group=1)
 async def sub(bot: DonLee_Robot_V2, msg: Import.Msg):
-        button = [[     
-          Import.Button("🖥️𝖵𝗂𝖽𝖾𝗈", url="https://www.youtube.com/watch?v=NrbMc93aCzA"),
-          Import.Button("𝖲𝗎𝗉𝗉𝗈𝗋𝗍🤝", url="https://www.youtube.com/watch?v=NrbMc93aCzA")
-          ],[
-          Import.Button("📢𝖴𝗉𝖽𝖺𝗍𝖾𝗌", url="https://www.youtube.com/watch?v=NrbMc93aCzA"),
-          Import.Button("𝖸𝗈𝗎𝖳𝗎𝖻𝖾💞", url="https://www.youtube.com/watch?v=NrbMc93aCzA")
-          ],[
+        button = [[
           Import.Button("📦𝖦𝗂𝗍𝗁𝗎𝖻", url="http://github.com/PR0FESS0R_99"),
           Import.Button("𝖨𝗇𝗌𝗍𝖺😁", url="https://www.instagram.com/mrk_yt_")
           ],[
@@ -158,7 +152,7 @@ async def sub(bot: DonLee_Robot_V2, msg: Import.Msg):
 @DonLee_Robot_V2.on_message(filters.private & filters.command("report"))
 async def admin(bot, msg):
     button = [[  
-       Import.Button("𝖢𝗅𝗂𝖼𝗄 𝖧𝖾𝗋𝖾➡️", url="t.me/PR0FESS0R_99")
+       Import.Button("𝖢𝗅𝗂𝖼𝗄 𝖧𝖾𝗋𝖾➡️", url="t.me/FHKLuV")
        ]]
     await msg.reply_text(
         text="𝖢𝗈𝗇𝗍𝖾𝖼𝗍 𝖡𝗎𝗍𝗍𝗈𝗇 𝖡𝖾𝗅𝗅𝗈𝗐",
