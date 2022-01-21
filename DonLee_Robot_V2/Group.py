@@ -47,7 +47,7 @@ async def addfilter(client, message):
     if not ((st.status == "administrator") or (st.status == "creator") or (str(userid) in Config.DEV_ID)):
         return
     if len(args) < 2:
-        await message.reply_text("https://youtu.be/neJ4jHC9Hng", quote=True)
+        await message.reply_text("https://t.me/Filmy_hangama", quote=True)
         return    
     extracted = split_quotes(args[1])
     text = extracted[0].lower()   
@@ -481,8 +481,8 @@ async def auto_filter(bot, update):
         if len_result != 1:
             result[0].append(
                 [
-                    InlineKeyboardButton("𝖭𝖾𝗑𝗍 »»", callback_data=f"navigate(0|next|{query})"),
-                    InlineKeyboardButton(f"🧾 1/{len_result if len_result < max_pages else max_pages}", callback_data="ignore"),
+                    InlineKeyboardButton("𝖭𝖾𝗑𝗍 ⇢", callback_data=f"navigate(0|next|{query})"),
+                    InlineKeyboardButton(f"📄 1/{len_result if len_result < max_pages else max_pages}", callback_data="ignore"),
                 ]
             )
 
@@ -554,6 +554,7 @@ async def auto_filter(bot, update):
                 photo=movie_url,
                 caption=f"""
 ↪️ 𝖱𝖾𝗊𝗎𝖾𝗌𝗍𝖾𝖽 𝖬𝗈𝗏𝗂𝖾: {query}
+
 🎞️ 𝖳𝗂𝗍𝗅𝖾: <a href={imdb['url']}>{imdb.get('title')}
 🎭 𝖦𝖾𝗇𝗋𝖾𝗌: {imdb.get('genres')}
 📆 𝖸𝖾𝖺𝗋: <a href={imdb['url']}/releaseinfo>{imdb.get('year')}</a>
@@ -562,7 +563,11 @@ async def auto_filter(bot, update):
 📑 𝖳𝗈𝗍𝖺𝗅 𝖯𝖺𝗀𝖾 : 1/{len_result if len_result < max_pages else max_pages}
 👤 𝖱𝖾𝗊𝗎𝖾𝗌𝗍𝖾𝖽 𝖡𝗒 : {update.from_user.mention}
 🖋 𝖲𝗍𝗈𝗋𝗒𝗅𝗂𝗇𝖾: <code>{imdb.get('plot')}</code>
-☑️ 𝖢𝗁𝖺𝗍 : {update.chat.title}""",
+☑️ 𝖢𝗁𝖺𝗍 : {update.chat.title}
+
+❤️‍🔥 Powered By : @Filmy_hangama
+#TFH
+""",
                 reply_markup=reply_markup,
                 chat_id=update.chat.id,
                 reply_to_message_id=update.message_id,
@@ -581,6 +586,9 @@ async def auto_filter(bot, update):
 📑 𝖳𝗈𝗍𝖺𝗅 𝖯𝖺𝗀𝖾 : 1/{len_result if len_result < max_pages else max_pages}
 👤 𝖱𝖾𝗊𝗎𝖾𝗌𝗍𝖾𝖽 𝖡𝗒 : {update.from_user.mention}
 ☑️ 𝖢𝗁𝖺𝗍 : {update.chat.title}
+
+❤️‍🔥 Powered By : @Filmy_hangama
+#TFH
 """,
                 reply_markup=reply_markup,
                 parse_mode="html",
