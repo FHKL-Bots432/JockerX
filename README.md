@@ -88,7 +88,11 @@ Click on the Help Button or <a href="https://telegram.dog/Donlee_Robot">/help</a
 <p align="center">
 <a href="https://youtu.be/NrbMc93aCzA"><img src="https://github.com/PR0FESS0R-99/Buttons/blob/Professor-99/heroku/herokudeploy-01.svg" alt="PR0FESS0R-99" border="0" height="125" width="200" align="center" /></a>
 </p>
-[![Deploy](https://telegra.ph/file/34b4447858eba5adcc481.jpg)](https://heroku.com/deploy?template=https://github.com/FHKL-Bots432/JockerX)
+<a href="https://heroku.com/deploy?template=https://github.com/FHKL-Bots432/JockerX/tree/master">
+  <img src="https://www.herokucdn.com/deploy/button.svg" alt="Deploy">
+</a>
+</p>
+</details>
 
 ----
 
