@@ -84,10 +84,8 @@ async def help(bot: DonLee_Robot_V2, msg: Import.Msg):
           ],[
           Import.Button("𝖡𝖺𝗇", callback_data="ban"),
           Import.Button("𝖬𝗎𝗍𝖾", callback_data="mute"),
-          Import.Button("𝖯𝗎𝗋𝗀𝖾", callback_data="purge")
           ],[
           Import.Button("𝖳𝖾𝗅𝖾𝗀𝗋𝖺𝖯𝗁", callback_data="telegraph"),
-          Import.Button("𝖳𝖳𝖲", callback_data="tts"),
           Import.Button("𝖲𝗍𝗂𝖼𝗄𝖾𝗋 𝖨𝖽", callback_data="sticker")
           ],[
           Import.Button("𝖢𝗈𝗎𝗇𝗍𝗋𝗒", callback_data="country"),
@@ -97,9 +95,10 @@ async def help(bot: DonLee_Robot_V2, msg: Import.Msg):
           Import.Button("𝖱𝖾𝗉𝗈𝗋𝗍", callback_data="report"),
           Import.Button("𝖶𝖾𝗅𝖼𝗈𝗆𝖾", callback_data="welcome")
           ],[
-          Import.Button("🏠𝖧𝗈𝗆𝖾", callback_data="home"),
+          Import.Button("𝖧𝗈𝗆𝖾", callback_data="home"),
           Import.Button("𝖲𝗍𝖺𝗍𝗎𝗌", callback_data="status"),
-          Import.Button("𝖠𝖻𝗈𝗎𝗍🤠", callback_data="about")
+          
+          Import.Button("ᴀʙᴏᴜᴛ", callback_data="about")
           ]]
         await bot.send_photo(
             chat_id=msg.chat.id,
@@ -115,12 +114,11 @@ async def help(bot: DonLee_Robot_V2, msg: Import.Msg):
 @DonLee_Robot_V2.on_message(filters.command(["about"]) & filters.private, group=1)
 async def about(bot: DonLee_Robot_V2, msg: Import.Msg):
         button = [[
-          Import.Button("👨‍💻𝖣𝖾𝗉𝗅𝗈𝗒", url='https://www.youtube.com/watch?v=NrbMc93aCzA'),
-          Import.Button("𝖲𝗈𝗎𝗋𝖼𝖾📦", callback_data="source")
+          Import.Button("𝖲𝗈𝗎𝗋𝖼𝖾", callback_data="source")
           ],[
-          Import.Button("⚠️𝖧𝖾𝗅𝗉", callback_data="help"),
-          Import.Button("🏠𝖧𝗈𝗆𝖾", callback_data="home"),
-          Import.Button("𝖢𝗅𝗈𝗌𝖾🗑️", callback_data="close")
+          Import.Button("ʜᴇʟᴘ", callback_data="help"),
+          Import.Button("𝖧𝗈𝗆𝖾", callback_data="home"),
+          Import.Button("𝖢𝗅𝗈𝗌𝖾", callback_data="close")
           ]]                     
         await bot.send_photo(
             chat_id=msg.chat.id,
@@ -135,8 +133,8 @@ async def about(bot: DonLee_Robot_V2, msg: Import.Msg):
 @DonLee_Robot_V2.on_message(filters.command(["sub", "subscribe"]) & filters.private, group=1)
 async def sub(bot: DonLee_Robot_V2, msg: Import.Msg):
         button = [[
-          Import.Button("📦𝖦𝗂𝗍𝗁𝗎𝖻", url="http://github.com/PR0FESS0R_99"),
-          Import.Button("𝖨𝗇𝗌𝗍𝖺😁", url="https://www.instagram.com/mrk_yt_")
+          Import.Button("📦𝖦𝗂𝗍𝗁𝗎𝖻", url="http://github.com/LionKettyUD"),
+          Import.Button("𝖨𝗇𝗌𝗍𝖺😁", url="https://www.instagram.com/buck6742")
           ],[
           Import.Button("𝖢𝗅𝗈𝗌𝖾🗑️", callback_data="close")
           ]]                     
